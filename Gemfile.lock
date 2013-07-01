@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/roman/dev/google-map-stitch
+GIT
+  remote: git://github.com/romanlehnert/google-map-stitch.git
+  revision: 69d3d79ea95bee62239902b56a3953d112621b20
   specs:
     google-map-stitch (0.1.3)
       rmagick
