@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'gogle-maps-stitch-bin'
+  s.name        = 'google-maps-stitch-bin'
   s.version     = '0.1.0'
   s.date        = '2013-12-29'
   s.summary     = "Get images from google maps"
