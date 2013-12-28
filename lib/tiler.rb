@@ -3,7 +3,6 @@ require 'open-uri'
 require 'tiler/tile'
 require 'tiler/tiles'
 require 'RMagick'
-require 'debugger'
 
 
 class Tiler

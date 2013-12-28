@@ -68,11 +68,7 @@ class TilesCollection
     columns.each do |column|
       col = Magick::ImageList.new
       rows.each do |row|
-        begin
         col.push(Magick::Image.read(tile(column,row).local_file_name).first)
-        rescue
-          debugger
-        end
       end
       output_data.push(col.append(true))
     end
