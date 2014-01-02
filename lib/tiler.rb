@@ -1,4 +1,5 @@
 require 'simple_mercator_location'
+require 'forwardable'
 require 'open-uri'
 require 'tiler/tile'
 require 'tiler/tiles'

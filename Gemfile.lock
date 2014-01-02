@@ -2,9 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     awesome_print (1.2.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.0.9)
+    debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     ffi (1.9.3)
     formatador (0.2.4)
@@ -17,17 +20,23 @@ GEM
     guard-rspec (3.1.0)
       guard (>= 1.8)
       rspec (~> 2.13)
+    interception (0.3)
     listen (2.2.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
     method_source (0.8.2)
-    pickled_optparse (0.1.1)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-rescue (1.2.0)
+      interception (>= 0.3)
+      pry
+    pry-stack_explorer (0.4.9.1)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     rake (10.1.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.2)
@@ -53,7 +62,8 @@ DEPENDENCIES
   awesome_print
   guard
   guard-rspec
-  pickled_optparse
+  pry-rescue
+  pry-stack_explorer
   rake
   rmagick
   rspec
