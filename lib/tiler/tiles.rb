@@ -1,6 +1,6 @@
 class TilesCollection
 
-  attr_accessor :zoom, :source, :output_file
+  attr_accessor :zoom, :source, :output_file, :dir
   attr_reader :start, :end
 
   def initialize(args)
@@ -52,8 +52,19 @@ class TilesCollection
     end
   end
 
+
+  def create_temp_dir
+    @dir = Dir.mktmpdir
+  end
+
+
+  def delete_temp_dir
+    FileUtils.remove_entry_secure dir if dir
+  end
+
   def download
-    flatten.each{ |tile| tile.download }
+    create_temp_dir
+    flatten.each{ |tile| tile.download(dir) }
   end
 
   def cleanup
@@ -61,6 +72,7 @@ class TilesCollection
       tile.file.close
       tile.file.unlink
     end
+    delete_temp_dir
   end
 
   def stitch
